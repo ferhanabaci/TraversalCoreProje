@@ -18,7 +18,8 @@ namespace TraversalCoreProje.Controllers
         public IActionResult DetinationDetails(int id)
         {
             // dıardan id göre islem yapılcak 
-            return View();  
+            var values = destinationManager.TGetByID(id);
+            return View(values);  
         }
         [HttpPost]
         public IActionResult DestinationDetails(Destination p)
