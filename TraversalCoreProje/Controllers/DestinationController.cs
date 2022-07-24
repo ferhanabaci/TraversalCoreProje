@@ -17,6 +17,7 @@ namespace TraversalCoreProje.Controllers
         [HttpGet]
         public IActionResult DetinationDetails(int id)
         {
+            ViewBag.i = id; // id den gelen değer comment ilişkişi için 
             // dıardan id göre islem yapılcak 
             var values = destinationManager.TGetByID(id);
             return View(values);  

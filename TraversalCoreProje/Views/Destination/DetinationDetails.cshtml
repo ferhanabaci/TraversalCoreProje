@@ -178,7 +178,7 @@
 
 
                 
-                 @await Component.InvokeAsync("_CommentList")
+                 @await Component.InvokeAsync("_CommentList",new { id = ViewBag.i }) @*benim comment ve destination ile ilişkinlendirmem için sonuna parametre atamsı yapmam gerekiyor.*@
 
                  @await Component.InvokeAsync("_AddComment")
 
